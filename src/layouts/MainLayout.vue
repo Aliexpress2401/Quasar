@@ -14,7 +14,7 @@
 
       </q-toolbar>
       <div class="q-px-lg q-px-xl q-mb-md">
-        <div class="text-h3">Todo:</div>
+        <div class="text-h3">Ali Test</div>
         <div class="text-subtitle1">{{todaysDate}}</div>
       </div>
       <q-img src="src/assets/wallpaper.jpg" class="header-image absolute-top"></q-img>
@@ -29,32 +29,40 @@
         <q-scroll-area style="height: calc(100% - 144px); margin-top: 144px; border-right: 1px solid #ddd">
           <q-list padding>
             <q-item
-            to="/"
-            exact
-            clickable v-ripple>
+              to="/todo"
+              exact
+              clickable v-ripple>
               <q-item-section avatar>
                 <q-icon name="list" />
               </q-item-section>
-
               <q-item-section>
                 Todo
               </q-item-section>
             </q-item>
 
             <q-item
-            to="/help"
-            exact
-            clickable v-ripple>
+              to="/content"
+              exact
+              clickable v-ripple>
               <q-item-section avatar>
-                <q-icon name="help" />
+                <q-icon name="today" />
               </q-item-section>
-
               <q-item-section>
-                Help
+                Content
               </q-item-section>
             </q-item>
 
-
+            <q-item
+              to="/help"
+              exact
+              clickable v-ripple>
+                <q-item-section avatar>
+                  <q-icon name="help" />
+                </q-item-section>
+                <q-item-section>
+                  Help
+                </q-item-section>
+            </q-item>
           </q-list>
         </q-scroll-area>
 
@@ -64,7 +72,7 @@
               <img src="src/assets/profile.jpg">
             </q-avatar>
             <div class="text-weight-bold">Alice</div>
-            <div>@alicru</div>
+            <div>@alicecrudele</div>
           </div>
         </q-img>
       </q-drawer>
@@ -83,22 +91,6 @@ import { defineComponent, ref } from 'vue'
 
 import { date } from 'quasar'
 
-const linksList = [
-  {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-
-]
-
 export default defineComponent({
   name: 'MainLayout',
 
@@ -110,7 +102,6 @@ export default defineComponent({
     const leftDrawerOpen = ref(false)
 
     return {
-      essentialLinks: linksList,
       leftDrawerOpen,
       toggleLeftDrawer () {
         leftDrawerOpen.value = !leftDrawerOpen.value
@@ -124,8 +115,6 @@ export default defineComponent({
       return date.formatDate(timeStamp, 'dddd D MMMM')
     }
   }
-
-
 
 
 })
