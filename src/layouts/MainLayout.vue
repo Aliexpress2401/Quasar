@@ -45,10 +45,22 @@
               exact
               clickable v-ripple>
               <q-item-section avatar>
-                <q-icon name="today" />
+                <q-icon name="eco" />
               </q-item-section>
               <q-item-section>
-                Content
+                Files
+              </q-item-section>
+            </q-item>
+
+            <q-item
+              to="/weather"
+              exact
+              clickable v-ripple>
+              <q-item-section avatar>
+                <q-icon name="map" />
+              </q-item-section>
+              <q-item-section>
+                Weather
               </q-item-section>
             </q-item>
 

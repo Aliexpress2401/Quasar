@@ -9,7 +9,9 @@
         </div>
       </q-img>
       <q-card-actions>
-        <q-btn flat>Site</q-btn>
+        <q-btn
+        to="https://quasar.dev"
+        flat>Site</q-btn>
         <q-btn flat>Notes</q-btn>
       </q-card-actions>
     </q-card>
