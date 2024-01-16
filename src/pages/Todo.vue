@@ -1,5 +1,5 @@
 <template>
-  <q-page  class="bg-gray-3 column">
+  <q-page  class="bg-gray-3 column bg-white">
     <div class="row q-pa-sm bg-black">
       <q-input
       v-model="newTask"
